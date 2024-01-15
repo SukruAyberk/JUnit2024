@@ -44,6 +44,7 @@ public class C04_IFrame extends TestBase {
         Assert.assertTrue(fashionText.isDisplayed());
         ReusableMethods.waitFor(2);
         driver.switchTo().defaultContent();
+
     }
 
 }

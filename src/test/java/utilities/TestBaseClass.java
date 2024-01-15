@@ -23,6 +23,7 @@ public class TestBaseClass {
     @AfterClass
     public static void tearDown() {
         driver.close();
+
     }
 
 }
