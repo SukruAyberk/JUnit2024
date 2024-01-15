@@ -48,7 +48,6 @@ public class C05_DropdownHandle extends TestBase {
         System.out.println(ayDropdown.getText());
 
         //    6.Ay Dropdown menusunun boyutunun 13 olduğunu test edin
-
-
+        Assert.assertEquals(13, aySelect.getOptions().size());
     }
 }
