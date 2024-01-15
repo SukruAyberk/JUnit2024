@@ -5,7 +5,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import utilities.ReusableMethods;
 import utilities.TestBase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class C05_DropdownHandle extends TestBase {
 
@@ -45,7 +49,20 @@ public class C05_DropdownHandle extends TestBase {
         System.out.println(gunSelect.getFirstSelectedOption().getText() + " " + aySelect.getFirstSelectedOption().getText() + " " + yilSelect.getFirstSelectedOption().getText());
 
         //    5.Ay dropdown menüdeki tum değerleri(value) yazdırın
-        System.out.println(ayDropdown.getText());
+        //1. yol
+        System.out.println("DDM'de yazan: " + ayDropdown.getText());
+
+        //2. yol
+        List<String> ayList = new ArrayList<>();
+        for (int i = 0; i < aySelect.getOptions().size(); i++) {
+            ayList.add(aySelect.getOptions().get(i).getText());
+        }
+        System.out.println("for loopla kendim listeye aldığım: " + ayList);
+
+        //3. yol
+        List<WebElement> ayListWE = aySelect.getOptions();
+        List<String> ayListSTR = ReusableMethods.strToList(ayListWE);
+        System.out.println("methodla listeye aldığım: " + ayListSTR);
 
         //    6.Ay Dropdown menusunun boyutunun 13 olduğunu test edin
         Assert.assertEquals(13, aySelect.getOptions().size());
