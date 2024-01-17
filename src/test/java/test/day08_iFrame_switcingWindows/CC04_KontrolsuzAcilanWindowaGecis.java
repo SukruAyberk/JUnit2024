@@ -15,6 +15,7 @@ public class CC04_KontrolsuzAcilanWindowaGecis extends TestBase {
     public void test01(){
         //● https://testotomasyonu.com/addremove/ adresine gidin.
         driver.get("https://testotomasyonu.com/addremove/");
+
         //● Sayfadaki textin “Add/Remove Elements” olduğunu doğrulayın.
         WebElement textElementi = driver.findElement(By.xpath("//*[text() = 'Add/Remove Elements']"));
         String expectedYazi = "Add/Remove Elements";
@@ -38,8 +39,7 @@ public class CC04_KontrolsuzAcilanWindowaGecis extends TestBase {
 
         String ikinciWindowWHD = "";
 
-        for (String eachWhd : whdSeti
-        ) {
+        for (String eachWhd : whdSeti) {
 
             if (!eachWhd.equals(ilkWindowWHD)){
                 ikinciWindowWHD = eachWhd;
