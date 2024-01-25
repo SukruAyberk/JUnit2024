@@ -52,6 +52,6 @@ public class C04_GetScreenShot extends TestBase {
 
         FileUtils.copyFile(geciciDosya,kursScreenShot);
 
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(1);
     }
 }
